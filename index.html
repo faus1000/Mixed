@@ -16,6 +16,22 @@
 
         }
 
+        #reloadNums {
+            width: 24px;
+            height: 24px;
+            opacity: 70%;
+            position: absolute;
+            transform: translate(8px, 4px);
+        }
+
+        #reloadAxis {
+            width: 24px;
+            height: 24px;
+            opacity: 70%;
+            position: absolute;
+            transform: translate(8px, 160px);
+        }
+
         #uno {
 
             border: 0px;
@@ -26,13 +42,26 @@
 
             border: 0px;
             width: 100%;
-            height: 100%; 
+            height: 100%;
         }
     </style>
+    <script>
+        function relNums() {
+            document.getElementById('uno').src += '';
+        }
+        function relAxis() {
+            document.getElementById('dos').src += '';
+        }
+
+
+    </script>
 </head>
 
 <body>
     <div id="container">
+
+        <img id="reloadNums" src="./images/refresh-free-icon-font.svg" onclick="relNums()" />
+        <img id="reloadAxis" src="./images/refresh-free-icon-font.svg" onclick="relAxis()" />
         <iframe id="uno" src="https://faus1000.github.io/numgview/"></iframe>
         <iframe id="dos" src="https://faus1000.github.io/axisview.github.io/"></iframe>
 
